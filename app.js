@@ -19,6 +19,8 @@ const limiter = require('./middlewares/rateLimiter');
 const options = {
   origin: [
     'http://localhost:3001',
+    'http://pluxurymoviesexplorer.nomoredomains.monster',
+    'https://pluxurymoviesexplorer.nomoredomains.monster',
   ],
   methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
   preflightContinue: false,
