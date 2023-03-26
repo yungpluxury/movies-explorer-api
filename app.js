@@ -21,6 +21,7 @@ const options = {
     'http://localhost:3001',
     'http://pluxurymoviesexplorer.nomoredomains.monster',
     'https://pluxurymoviesexplorer.nomoredomains.monster',
+    'https://yungpluxury.github.io/movies-explorer-frontend/',
   ],
   methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
   preflightContinue: false,
