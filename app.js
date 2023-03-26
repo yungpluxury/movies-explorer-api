@@ -22,6 +22,7 @@ const options = {
     'http://pluxurymoviesexplorer.nomoredomains.monster',
     'https://pluxurymoviesexplorer.nomoredomains.monster',
     'https://yungpluxury.github.io',
+    'https://yungpluxury.space',
   ],
   methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
   preflightContinue: false,
