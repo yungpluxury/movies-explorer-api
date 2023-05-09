@@ -48,7 +48,6 @@ app.use('*', cors(options));
 
 app.use(requestLogger);
 
-
 app.use('/.netlify/functions/api', signRouter);
 
 app.use(auth);
