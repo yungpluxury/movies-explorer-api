@@ -9,7 +9,7 @@ ___
 
 ### Где найти:
 
-Ссылка на сервис - https://yungpluxury.space/
+Ссылка на сервис - https://yungpluxury-explorer-frontend.netlify.app/
 
 Ссылка на API - https://yungpluxury-explorer-backend.netlify.app/.netlify/functions/api
 
