@@ -3,7 +3,7 @@ ___
 
 ### Описание:
 
-Данный проект создан для поддержания работы сервиса **Movies-explorer** ([перейти](https://yungpluxury.space/)). Выполняет функции: регистрации, авторизации, редактирования профиля пользователя и добавления/удаления фильмов из избранного пользователя.
+Данный проект создан для поддержания работы сервиса **Movies-explorer** ([перейти](https://yungpluxury-explorer-backend.netlify.app/.netlify/functions/api)). Выполняет функции: регистрации, авторизации, редактирования профиля пользователя и добавления/удаления фильмов из избранного пользователя.
 
 ___
 
@@ -11,7 +11,7 @@ ___
 
 Ссылка на сервис - https://yungpluxury.space/
 
-Ссылка на API - https://api.yungpluxury.space/
+Ссылка на API - https://yungpluxury-explorer-backend.netlify.app/.netlify/functions/api
 
 Ссылка на репозиторий с фронтэндом - https://github.com/yungpluxury/movies-explorer-frontend
 
