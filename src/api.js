@@ -1,10 +1,14 @@
 const express = require('express');
+const serverless = require("serverless-http");
+
 const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const { errors } = require('celebrate');
 const helmet = require('helmet');
 require('dotenv').config();
+
+const { DB } = process.env;
 
 const usersRouter = require('./routes/users');
 const moviesRouter = require('./routes/movies');
@@ -18,7 +22,7 @@ const limiter = require('./middlewares/rateLimiter');
 
 const options = {
   origin: [
-    'http://localhost:3001',
+    'http://localhost:3000',
     'http://pluxurymoviesexplorer.nomoredomains.monster',
     'https://pluxurymoviesexplorer.nomoredomains.monster',
     'https://yungpluxury.github.io',
@@ -33,29 +37,26 @@ const options = {
 
 const app = express();
 
-app.use(helmet());
-
-app.use('*', cors(options));
-
-const { PORT = 3000 } = process.env;
-const { DATA_BASE, NODE_ENV } = process.env;
+mongoose.connect(DB);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-mongoose.connect(NODE_ENV === 'production' ? DATA_BASE : 'mongodb://localhost:27017/bitfilmsdb');
+app.use(helmet());
+
+app.use('*', cors(options));
 
 app.use(requestLogger);
 
 app.use(limiter);
 
-app.use('/', signRouter);
+app.use('/.netlify/functions/api', signRouter);
 
 app.use(auth);
 
-app.use('/', usersRouter);
-app.use('/', moviesRouter);
-app.use('/', serverErrorRouter);
+app.use('/.netlify/functions/api', usersRouter);
+app.use('/.netlify/functions/api', moviesRouter);
+app.use('/.netlify/functions/api', serverErrorRouter);
 
 app.use(errorLogger);
 
@@ -63,6 +64,5 @@ app.use(errors());
 
 app.use(errorHandler);
 
-app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}`);
-});
+module.exports = app;
+module.exports.handler = serverless(app);

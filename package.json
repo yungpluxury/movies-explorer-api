@@ -2,19 +2,18 @@
   "name": "movies-explorer-api",
   "version": "1.0.0",
   "description": "auth api for project movies-explorer",
-  "main": "app.js",
+  "main": "api.js",
   "scripts": {
-    "lint": "npx eslint .",
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "netlify-lambda serve src",
+    "build": "netlify-lambda build src"
   },
   "author": "yungpluxury",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^7.32.0",
-    "nodemon": "^2.0.12",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.24.2"
+    "eslint-plugin-import": "^2.24.2",
+    "nodemon": "^2.0.12"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -30,6 +29,8 @@
     "joi": "^17.4.2",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.4",
+    "netlify-lambda": "^2.0.16",
+    "serverless-http": "^3.2.0",
     "validator": "^13.6.0",
     "winston": "^3.3.3"
   },
@@ -40,5 +41,6 @@
   "bugs": {
     "url": "https://github.com/yungpluxury/movies-explorer-api/issues"
   },
-  "homepage": "https://github.com/yungpluxury/movies-explorer-api#readme"
+  "homepage": "https://github.com/yungpluxury/movies-explorer-api#readme",
+  "keywords": []
 }
