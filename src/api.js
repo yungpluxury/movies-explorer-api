@@ -27,6 +27,7 @@ const options = {
     'https://pluxurymoviesexplorer.nomoredomains.monster',
     'https://yungpluxury.github.io',
     'https://yungpluxury.space',
+    'https://yungpluxury-explorer-frontend.netlify.app',
   ],
   methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
   preflightContinue: false,
